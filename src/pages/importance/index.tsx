@@ -8,8 +8,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 //Language
-import nl from "./Languages/nl";
-import en from "./Languages/en";
+import nl from "../../components/PageLanguages/importance/nl";
+import en from "../../components/PageLanguages/importance/en";
 
 const Importance = () => {
   //Language Stuff :
