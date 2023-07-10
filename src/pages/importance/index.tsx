@@ -8,14 +8,14 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 //Language
-//import nl from "./Languages/nl";
-//import en from "./Languages/en";
+import nl from "./Languages/nl";
+import en from "./Languages/en";
 
 const Importance = () => {
   //Language Stuff :
-  /*const router = useRouter();
+  const router = useRouter();
   const { locale } = router;
-  const t = locale === "nl" ? nl : en;*/
+  const t = locale === "nl" ? nl : en;
 
   return (
     <div>
