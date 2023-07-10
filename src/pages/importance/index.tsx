@@ -24,20 +24,20 @@ const Importance = () => {
       <div className="h-[80vh] w-[80vw] ml-[10vw] flex md:flex-row flex-col md:mt-12 mt-10 mb-32 md:mb-0">
         <div className="md:w-[40vw] w-[80vw] bg-green md:mt-20">
           <h1 className="font-titleFont text-4xl font-bold">
-            Test
+            {t.title}
           </h1>
           <div className="font-bodyFont text-base mt-8">
             <p>
-              sdfsdf
+              {t.p1}
             </p>
             <p className="mt-4">
-              sdfsdf
+              {t.p2}
             </p>
             <p className="mt-4">
-              sdfsdf
+              {t.p3}
             </p>
             <button className="bg-primary text-white px-6 py-2 rounded-full font-bodyFont font-semibold mt-12">
-              <Link href="/contact">sdfsdff</Link>
+              <Link href="/contact">{t.button}</Link>
             </button>
           </div>
         </div>
