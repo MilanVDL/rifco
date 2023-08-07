@@ -19,7 +19,7 @@ const Information = () => {
   return (
     <div>
       <>
-        <section className="lg:pt-[120px] pb-12 lg:pb-[90px] overflow-hidden w-[80vw] ml-[10vw] border-b-2 border-gray-300">
+        <section className="pb-12 lg:pb-[90px] overflow-hidden w-[80vw] ml-[10vw]">
           <div className="container mx-auto">
             <div className="flex flex-wrap items-center justify-between -mx-4">
               <div className="w-full px-4 lg:w-6/12">

@@ -32,7 +32,7 @@ const Navbar = () => {
             height={114}
             alt="Rifco Logo"
             src={Logo}
-            className="md:cursor-pointer h-16 w-auto"
+            className="md:cursor-pointer h-32 md:object-cover object-none object-center"
           />
           <div className="text-3xl md:hidden mt-4" onClick={() => setOpenNav(!openNav)}>
                 { !openNav ? <IoMdMenu /> : <IoMdClose /> }
@@ -45,7 +45,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/" className="py-7 px-3 inline-block">
+            <Link href="/webshop" className="py-7 px-3 inline-block">
               Webshop
             </Link>
           </li>
@@ -61,7 +61,7 @@ const Navbar = () => {
         md:hidden bg-gray-200 absolute w-full top-0 h-fit bottom-0 pt-24 pb-4 pl-4 duration-500 rounded-b-3xl ${openNav ? 'left-0' : 'left-[-100%]'}
         `}>
           <li>
-            <Link href="/" className="py-7 px-3 inline-block">
+            <Link href="/" className="py-7 px-3 inline-block mt-8 md:mt-0">
               Home
             </Link>
           </li>

@@ -17,12 +17,13 @@ export default function Home() {
     <>
     <Navbar />
     <Hero />
-    <Information />
     <Counter />
+    <Information />
     <Services />
     <CallToAction />
     <ContactComponent />
     <Footer />
+    
     </>
   )
 }

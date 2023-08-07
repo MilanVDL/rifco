@@ -1,5 +1,7 @@
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import {useSpring, animated} from "react-spring";
+
 import {
   IoMdContacts,
   IoMdBusiness,
@@ -11,6 +13,20 @@ import {
 import nl from "./Languages/nl";
 import en from "./Languages/en";
 
+// Increasing number
+type n = {
+  n: number;
+}
+function Number({n}: n) {
+  const { number } = useSpring ({
+    from: { number: 0},
+    number: n,
+    delay: 200,
+    config: {mass: 1, tension: 20, friction: 20}
+  });
+  return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>;
+}
+
 const Counter = () => {
   
   //Language Stuff :
@@ -19,7 +35,7 @@ const Counter = () => {
   const t = locale === "nl" ? nl : en;
 
   return (
-    <section className="mb-32 text-gray-800 text-center my-10 md:my-20 md:max-w-[80vw] md:ml-[10vw]">
+    <section className="mb-32 pb-24 text-gray-800 text-center my-10 md:my-20 md:max-w-[80vw] md:ml-[10vw] border-b-2 border-gray-300">
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-x-6 lg:gap-x-0 items-center">
         <div className="mb-12 lg:mb-0 relative">
           <svg
@@ -33,7 +49,11 @@ const Counter = () => {
             ></path>
             Name
           </svg>
-          <h5 className="text-lg font-medium text-primary mb-4">55+</h5>
+          <div className="inline-flex">
+            <h5 className="text-lg font-medium text-primary mb-4 align-middle text-center content-center"><Number n={55}/></h5>
+            <h5 className="text-lg font-bold text-primary ">+</h5>
+          </div>
+          
           <h6 className="font-bold text-gray-500 font-titleFont">{t.block1}</h6>
           <hr className="absolute right-0 top-0 w-px bg-gray-200 h-full hidden lg:block" />
         </div>
@@ -49,7 +69,10 @@ const Counter = () => {
               d="M12.41 148.02l232.94 105.67c6.8 3.09 14.49 3.09 21.29 0l232.94-105.67c16.55-7.51 16.55-32.52 0-40.03L266.65 2.31a25.607 25.607 0 0 0-21.29 0L12.41 107.98c-16.55 7.51-16.55 32.53 0 40.04zm487.18 88.28l-58.09-26.33-161.64 73.27c-7.56 3.43-15.59 5.17-23.86 5.17s-16.29-1.74-23.86-5.17L70.51 209.97l-58.1 26.33c-16.55 7.5-16.55 32.5 0 40l232.94 105.59c6.8 3.08 14.49 3.08 21.29 0L499.59 276.3c16.55-7.5 16.55-32.5 0-40zm0 127.8l-57.87-26.23-161.86 73.37c-7.56 3.43-15.59 5.17-23.86 5.17s-16.29-1.74-23.86-5.17L70.29 337.87 12.41 364.1c-16.55 7.5-16.55 32.5 0 40l232.94 105.59c6.8 3.08 14.49 3.08 21.29 0L499.59 404.1c16.55-7.5 16.55-32.5 0-40z"
             />
           </svg>
-          <h5 className="text-lg font-medium text-primary mb-4">267+</h5>
+          <div className="inline-flex">
+            <h5 className="text-lg font-medium text-primary mb-4 align-middle text-center content-center"><Number n={267}/></h5>
+            <h5 className="text-lg font-bold text-primary ">+</h5>
+          </div>
           <h6 className="font-bold text-gray-500 font-titleFont">{t.block2}</h6>
           <hr className="absolute right-0 top-0 w-px bg-gray-200 h-full hidden lg:block" />
         </div>
@@ -65,7 +88,10 @@ const Counter = () => {
               d="M464 448H48c-26.51 0-48-21.49-48-48V112c0-26.51 21.49-48 48-48h416c26.51 0 48 21.49 48 48v288c0 26.51-21.49 48-48 48zM112 120c-30.928 0-56 25.072-56 56s25.072 56 56 56 56-25.072 56-56-25.072-56-56-56zM64 384h384V272l-87.515-87.515c-4.686-4.686-12.284-4.686-16.971 0L208 320l-55.515-55.515c-4.686-4.686-12.284-4.686-16.971 0L64 336v48z"
             />
           </svg>
-          <h5 className="text-lg font-medium text-primary mb-4">80+</h5>
+          <div className="inline-flex">
+            <h5 className="text-lg font-medium text-primary mb-4 align-middle text-center content-center"><Number n={80}/></h5>
+            <h5 className="text-lg font-bold text-primary ">+</h5>
+          </div>
           <h6 className="font-bold text-gray-500 font-titleFont">{t.block3}</h6>
           <hr className="absolute right-0 top-0 w-px bg-gray-200 h-full hidden lg:block" />
         </div>
@@ -81,7 +107,10 @@ const Counter = () => {
               d="M320,32a32,32,0,0,0-64,0v96h64Zm48,128H16A16,16,0,0,0,0,176v32a16,16,0,0,0,16,16H32v32A160.07,160.07,0,0,0,160,412.8V512h64V412.8A160.07,160.07,0,0,0,352,256V224h16a16,16,0,0,0,16-16V176A16,16,0,0,0,368,160ZM128,32a32,32,0,0,0-64,0v96h64Z"
             />
           </svg>
-          <h5 className="text-lg font-medium text-primary mb-4">5</h5>
+          <div className="inline-flex">
+            <h5 className="text-lg font-medium text-primary mb-4 align-middle text-center content-center"><Number n={5}/></h5>
+            <h5 className="text-lg font-bold text-primary ">+</h5>
+          </div>
           <h6 className="font-bold text-gray-500 font-titleFont mb-0">{t.block4}</h6>
         </div>
       </div>

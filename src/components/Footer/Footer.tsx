@@ -9,17 +9,17 @@ const Footer = () => {
         <div className="container">
           <div className="flex flex-wrap -mx-4">
             <div className="w-full px-4 sm:w-2/3 lg:w-3/12">
-              <div className="w-full mb-10">
-                <Link href="/#" className="mb-6 inline-block max-w-[160px]">
+              <div className="w-full mb-10 mt-[-18vh]">
+                <Link href="/#" className="inline-block max-w-full ">
                   <Image
                     src={RifcoLogo}
                     alt="logo"
                     width={300}
                     height={200}
-                    className="max-w-full"
+                    className="h-auto md:object-cover object-none"
                   />
                 </Link>
-                <p className="text-base mb-7 text-body-color font-bold">
+                <p className="text-base mb-7 text-body-color font-bold mt-[-5vh]">
                 RIFCO: professional datacenter facility services
                 <br/>
                 <span className="italic font-semibold text-sm">When quality matters</span>

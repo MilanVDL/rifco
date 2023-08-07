@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import HeroImage from "../../../public/test-foto.png";
+import HeroImage from "../../../public/hero.jpg";
 import { useRouter } from "next/router";
 
 //Language
@@ -14,7 +14,7 @@ const Hero = () => {
   const t = locale === "nl" ? nl : en;
 
   return (
-    <section id="home" className="py-8 ">
+    <section id="home" className="py-8 pt-0 ">
       <div className="container flex flex-wrap items-center justify-center mx-auto mt-10 md:px-16 md:flex-row border-b-2 border-gray-300 md:pb-8 w-[80vw] ml-[10vw] md:w-auto md:mx-auto">
         <div className="mb-14 lg:mb-0 lg:w-1/2">
           <h1
@@ -47,7 +47,7 @@ const Hero = () => {
           <Image
             src={HeroImage}
             alt="Hero Image"
-            width={400}
+            width={600}
             height={700}
             className="ml-auto rounded-3xl hidden md:block"
           />
