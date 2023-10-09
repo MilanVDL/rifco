@@ -49,6 +49,11 @@ const Navbar = () => {
               Webshop
             </Link>
           </li>
+          <li>
+            <Link href="/about" className="py-7 px-3 inline-block">
+              {t.about}
+            </Link>
+          </li>
           <NavLinks />
         </ul>
         <div className="md:flex hidden">

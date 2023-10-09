@@ -60,8 +60,7 @@ const NavLinks = () => {
           {
             Head: "Werken bij Rifco",
             sublink: [
-              { name: "Informatie", link: "/1" },
-              { name: "Vacatures", link: "/2" },
+              { name: t.vaca, link: "/vacatures" },
             ],
           },
         ],

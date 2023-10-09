@@ -11,4 +11,6 @@ export default {
     head3: "KWALIETEITSCONTROLE",
     head3sub1: "STOF METING",
     head3sub2: "ESD METING",
+    about: "Over Ons",
+    vaca: "vacatures",
 };

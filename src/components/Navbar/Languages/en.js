@@ -11,4 +11,6 @@ export default {
     head3: "QUALITY CONTROL",
     head3sub1: "FABRIC MEASUREMENTS",
     head3sub2: "ESD MEASUREMENTS",
+    about: "About Us",
+    vaca: "vacancies",
 };
