@@ -20,7 +20,7 @@ const Modal2 = () => {
         </div>
         <div className="">
           <h2 className="flex font-bold text-3xl mt-0 md:mt-24 ml-8 md:ml-0">
-            Product Name
+            Product Namess
           </h2>
           <div className="mt-4 max-w-[80%] ml-8 md:ml-0">
             <p>
