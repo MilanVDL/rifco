@@ -44,6 +44,7 @@ const Navbar = () => {
               Home
             </Link>
           </li>
+          <NavLinks />
           <li>
             <Link href="/webshop" className="py-7 px-3 inline-block">
               Webshop
@@ -54,7 +55,11 @@ const Navbar = () => {
               {t.about}
             </Link>
           </li>
-          <NavLinks />
+          <li>
+          <Link href="/vacatures" className="py-7 px-3 inline-block">
+              {t.vaca}
+            </Link>
+          </li>
         </ul>
         <div className="md:flex hidden">
           <Button />

@@ -1,41 +1,59 @@
 import React from "react";
-import {GrFormClose} from "react-icons/gr"
-import { idText } from "typescript";
-
-type ModalInput = {
-    isVisible: boolean;
-    onClose: any;
-    title: any;
-}
-
-type test = {
-    target: any;
-    id: any;
-}
+import ReactDOM from "react-dom";
+import Button from "@/components/Button";
+import { AiOutlineClose } from "react-icons/ai";
 
 
-const Modal = (props: ModalInput) => {
-    const {isVisible, onClose, title} = props;
 
-    if(!isVisible) return null;
+const Modal = ({onClose, children, title, price, imageSrc}) => {
 
-    const handleClose = (e: any) => {
+  const handleCloseClick = (e) => {
+    e.preventDefault();
+    onClose();
+  }
 
-        if(e.target.id === "wrapper"){
-            onClose();
-        } 
-    }
-
-    return (
-        <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center z-50" onClick={e => handleClose(e)}>
-            <div className="w-[60vw]">
-                <div className="bg-white p-2 rounded relative">
-                    <GrFormClose size={30} className="absolute right-0 top-0 cursor-pointer" onClick={() => onClose()}/>
-                    {title}
-                </div>
-            </div>
+  const modalContent = (
+    <div className="w-screen h-screen fixed inset-0 backdrop-blur-sm z-50">
+      <div className="w-screen h-screen bg-gray-500 opacity-25 z-60 absolute"></div>
+      <div className="w-[70vw] ml-[15vw] h-auto mt-[10vh] bg-white grid grid-cols-1 md:grid-cols-2 rounded-xl absolute pb-[2rem] z-70">
+        <AiOutlineClose
+          size={24}
+          className="absolute top-0 right-0 mt-4 mr-4 hover:text-primary transition ease-in duration-500 cursor-pointer"
+          onClick={handleCloseClick}
+        />
+        <div className="flex items-center justify-center md:mt-8 md:mr-8 mr-8 ml-8 md:ml-0">
+          <img
+            alt="Test Image"
+            src={imageSrc}
+            className="object-contain mt-6 md:mt-0 w-full h-full md:h-[60vh]"
+          ></img>
         </div>
-    );
-}
+        <div className="">
+          <h2 className="flex font-bold text-3xl mt-0 md:mt-24 ml-8 md:ml-0">
+            {title} | {price} 
+          </h2>
+          <div className="mt-4 max-w-[80%] ml-8 md:ml-0">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+              facere natus vel recusandae eaque culpa officiis ducimus quod
+              nobis cum, nihil repudiandae, unde eligendi tenetur blanditiis
+              cumque tempore numquam laborum.
+            </p>
+          </div>
+          <div className="mt-8 ml-8 md:ml-0">
+            <Button />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+
+  return ReactDOM.createPortal(
+    modalContent,
+    document.getElementById("modal-root")
+  );
+
+};
 
 export default Modal;

@@ -47,24 +47,6 @@ const NavLinks = () => {
         },
       ],
     },
-      {
-        name: "Contact",
-        submenu: true,
-        sublinks: [
-          {
-            Head: "Neem Contact Op",
-            sublink: [
-              { name: "Contact Informatie", link: "/contact" },
-            ],
-          },
-          {
-            Head: "Werken bij Rifco",
-            sublink: [
-              { name: t.vaca, link: "/vacatures" },
-            ],
-          },
-        ],
-      },
   ];
 
   return (
