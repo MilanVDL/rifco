@@ -48,7 +48,7 @@ const LogoSlider = () => {
           },
         }}
         extensions={{ AutoScroll }}
-        className="md:w-[80vw] w-[95vw] md:ml-[10vw] ml-[2.5vw] bg-primary rounded-xl !p-[1em] md:p-[3em]"
+        className="md:w-[80vw] w-[95vw] md:ml-[10vw] ml-[2.5vw] bg-white !p-[1em] md:p-[3em] border-t-[1px] border-b-[1px] border-primary"
       >
         <SplideSlide>
           <Image
@@ -155,7 +155,7 @@ const LogoSlider = () => {
             width={200}
             height={300}
             alt="Europol"
-            className="object-contain h-[200px] w-[300px]"
+            className="object-cover h-[200px] w-[300px]"
           />
         </SplideSlide>
       </Splide>
