@@ -56,6 +56,7 @@ const LogoSlider = () => {
             width={200}
             height={300}
             alt="Rabobank Logo"
+            unoptimized
             className="object-cover h-[200px] w-[300px]"
           />
         </SplideSlide>
@@ -155,7 +156,7 @@ const LogoSlider = () => {
             width={200}
             height={300}
             alt="Europol"
-            className="object-cover h-[200px] w-[300px]"
+            className="object-contain h-[200px] w-[300px]"
           />
         </SplideSlide>
       </Splide>

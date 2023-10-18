@@ -27,10 +27,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/vacatures": [
+    "/importance": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/vacatures.js"
+      "static/chunks/pages/importance.js"
     ]
   },
   "ampFirstPages": []
