@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import React, { useEffect, useRef, useState } from "react";
-import {useSpring, animated} from "react-spring";
+import { useSpring, animated } from "react-spring";
 
 import {
   IoMdContacts,
@@ -16,19 +16,18 @@ import en from "./Languages/en";
 // Increasing number
 type n = {
   n: number;
-}
-function Number({n}: n) {
-  const { number } = useSpring ({
-    from: { number: 0},
+};
+function Number({ n }: n) {
+  const { number } = useSpring({
+    from: { number: 0 },
     number: n,
     delay: 200,
-    config: {mass: 1, tension: 20, friction: 20}
+    config: { mass: 1, tension: 20, friction: 20 },
   });
   return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>;
 }
 
 const Counter = () => {
-  
   //Language Stuff :
   const router = useRouter();
   const { locale } = router;
@@ -50,10 +49,12 @@ const Counter = () => {
             Name
           </svg>
           <div className="inline-flex">
-            <h5 className="text-lg font-medium text-primary mb-4 align-middle text-center content-center"><Number n={55}/></h5>
+            <h5 className="text-lg font-medium text-primary mb-4 align-middle text-center content-center">
+              <Number n={55} />
+            </h5>
             <h5 className="text-lg font-bold text-primary ">+</h5>
           </div>
-          
+
           <h6 className="font-bold text-gray-500 font-titleFont">{t.block1}</h6>
           <hr className="absolute right-0 top-0 w-px bg-gray-200 h-full hidden lg:block" />
         </div>
@@ -70,7 +71,9 @@ const Counter = () => {
             />
           </svg>
           <div className="inline-flex">
-            <h5 className="text-lg font-medium text-primary mb-4 align-middle text-center content-center"><Number n={267}/></h5>
+            <h5 className="text-lg font-medium text-primary mb-4 align-middle text-center content-center">
+              <Number n={267} />
+            </h5>
             <h5 className="text-lg font-bold text-primary ">+</h5>
           </div>
           <h6 className="font-bold text-gray-500 font-titleFont">{t.block2}</h6>
@@ -89,7 +92,9 @@ const Counter = () => {
             />
           </svg>
           <div className="inline-flex">
-            <h5 className="text-lg font-medium text-primary mb-4 align-middle text-center content-center"><Number n={80}/></h5>
+            <h5 className="text-lg font-medium text-primary mb-4 align-middle text-center content-center">
+              <Number n={40} />
+            </h5>
             <h5 className="text-lg font-bold text-primary ">+</h5>
           </div>
           <h6 className="font-bold text-gray-500 font-titleFont">{t.block3}</h6>
@@ -108,10 +113,14 @@ const Counter = () => {
             />
           </svg>
           <div className="inline-flex">
-            <h5 className="text-lg font-medium text-primary mb-4 align-middle text-center content-center"><Number n={5}/></h5>
+            <h5 className="text-lg font-medium text-primary mb-4 align-middle text-center content-center">
+              <Number n={20} />
+            </h5>
             <h5 className="text-lg font-bold text-primary ">+</h5>
           </div>
-          <h6 className="font-bold text-gray-500 font-titleFont mb-0">{t.block4}</h6>
+          <h6 className="font-bold text-gray-500 font-titleFont mb-0">
+            {t.block4}
+          </h6>
         </div>
       </div>
     </section>

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 //Language
 import nl from "./Languages/nl";
 import en from "./Languages/en";
+import Image from "next/image";
 
 const ContactComponent = () => {
   //Language Stuff :
@@ -13,10 +14,10 @@ const ContactComponent = () => {
 
   const [selectedLanguage, setSelectedLanguage] = useState("NL");
 
-  const changeContactLanguage = (e: { target: { value: any } }) =>{
+  const changeContactLanguage = (e: { target: { value: any } }) => {
     const value = e.target.value;
     setSelectedLanguage(value);
-  }
+  };
 
   return (
     <section className="bg-white py-20 lg:py-[120px] overflow-hidden z-10 relative w-[80vw] ml-[10vw]">
@@ -61,10 +62,37 @@ const ContactComponent = () => {
                   <h4 className="mb-1 text-2xl font-bold text-dark font-titleFont">
                     {t.location}
                   </h4>
-                  <p className="text-base text-body-color">
-                    <span className="font-titleFont font-extrabold">{selectedLanguage === "NL" ? "[NL]" : "[BE]"}</span>{" "}
-                    {selectedLanguage === "NL" ? "Haarbos 7, 3953 HA Maarsbergen" : "?????????, ???????????????????"}
-                  </p>
+                  <div className="flex">
+                    {selectedLanguage === "NL" ? (
+                      <Image
+                        src="/netherlands.png"
+                        width={24}
+                        height={24}
+                        alt="Dutch Flag"
+                        className=""
+                      />
+                    ) : (
+                      <Image
+                        src="/belgium.png"
+                        width={24}
+                        height={24}
+                        alt="Dutch Flag"
+                        className=""
+                      />
+                    )}
+                    <p
+                      className={
+                        "text-base text-body-color pl-2 " +
+                        (selectedLanguage === "BE"
+                          ? "text-[0.9rem]"
+                          : "text-[1rem]")
+                      }
+                    >
+                      {selectedLanguage === "NL"
+                        ? "Haarbos 7, 3953 HA Maarsbergen"
+                        : "Zwijnaardsesteenweg 511, 9000 Gent"}
+                    </p>
+                  </div>
                 </div>
               </div>
               <div className="mb-8 flex w-full max-w-[370px]">
@@ -84,10 +112,30 @@ const ContactComponent = () => {
                   <h4 className="mb-1 text-2xl font-bold text-dark font-titleFont">
                     {t.phone}
                   </h4>
-                  <p className="text-base text-body-color">
-                    <span className="font-titleFont font-extrabold">{selectedLanguage === "NL" ? "[NL]" : "[BE]"}</span>{" "}
-                    {selectedLanguage === "NL" ? "(+31) 085 - 020 7800" : "(+32) ???"}
-                  </p>
+                  <div className="flex">
+                    {selectedLanguage === "NL" ? (
+                      <Image
+                        src="/netherlands.png"
+                        width={24}
+                        height={24}
+                        alt="Dutch Flag"
+                        className=""
+                      />
+                    ) : (
+                      <Image
+                        src="/belgium.png"
+                        width={24}
+                        height={24}
+                        alt="Dutch Flag"
+                        className=""
+                      />
+                    )}
+                    <p className="text-base text-body-color pl-2">
+                      {selectedLanguage === "NL"
+                        ? "(+31) 085 - 020 7800"
+                        : "(+32) (0) 9 277 06 87"}
+                    </p>
+                  </div>
                 </div>
               </div>
               <div className="mb-8 flex w-full max-w-[370px]">
@@ -105,15 +153,55 @@ const ContactComponent = () => {
                   <h4 className="mb-1 text-2xl font-bold text-dark font-titleFont">
                     {t.email}
                   </h4>
-                  <p className="text-base text-body-color">
-                    <span className="font-titleFont font-extrabold">{selectedLanguage === "NL" ? "[NL]" : "[BE]"}</span>{" "}
-                    {selectedLanguage === "NL" ? "info@rifco.nl" : "info@rifco.be"}
-                  </p>
+                  <div className="flex">
+                    {selectedLanguage === "NL" ? (
+                      <Image
+                        src="/netherlands.png"
+                        width={24}
+                        height={24}
+                        alt="Dutch Flag"
+                        className=""
+                      />
+                    ) : (
+                      <Image
+                        src="/belgium.png"
+                        width={24}
+                        height={24}
+                        alt="Dutch Flag"
+                        className=""
+                      />
+                    )}
+
+                    <p className="text-base text-body-color pl-2">
+                      {selectedLanguage === "NL"
+                        ? "info@rifco.nl"
+                        : "info@rifco.be"}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
+            <div className="absolute text-black z-10 right-0 pr-4 pt-4">
+              {selectedLanguage === "NL" ? (
+                <Image
+                  src="/netherlands.png"
+                  width={24}
+                  height={20}
+                  alt="Dutch Flag"
+                  className=""
+                />
+              ) : (
+                <Image
+                  src="/belgium.png"
+                  width={24}
+                  height={20}
+                  alt="Dutch Flag"
+                  className=""
+                />
+              )}
+            </div>
             <div className="relative p-8 bg-white rounded-lg shadow-lg sm:p-12 border-2 border-gray-500">
               <form>
                 <ContactInputBox

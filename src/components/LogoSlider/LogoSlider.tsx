@@ -13,6 +13,7 @@ import "@splidejs/react-splide/css/sea-green";
 import "@splidejs/react-splide/css/core";
 import { freemem } from "os";
 import { lookup } from "dns";
+import Image from "next/image";
 
 const LogoSlider = () => {
   return (
@@ -50,31 +51,112 @@ const LogoSlider = () => {
         className="md:w-[80vw] w-[95vw] md:ml-[10vw] ml-[2.5vw] bg-primary rounded-xl !p-[1em] md:p-[3em]"
       >
         <SplideSlide>
-          <img src="https://dummyimage.com/300x200/000/fff" alt="Image 1" />
+          <Image
+            src="/Logos/Rabobank-Logo.png"
+            width={200}
+            height={300}
+            alt="Rabobank Logo"
+            className="object-cover h-[200px] w-[300px]"
+          />
         </SplideSlide>
         <SplideSlide>
-          <img src="https://dummyimage.com/300x200/000/fff" alt="Image 2" />
+          <Image
+            src="/Logos/Salute-Logo.jpg"
+            width={200}
+            height={300}
+            alt="Salute Inc"
+            className="object-cover h-[200px] w-[300px]"
+          />
         </SplideSlide>
         <SplideSlide>
-          <img src="https://dummyimage.com/300x200/000/fff" alt="Image 3" />
+          <Image
+            src="/Logos/Colruyt-Logo.svg"
+            width={200}
+            height={300}
+            alt="Salute Inc"
+            className="object-cover h-[200px] w-[300px]"
+          />
         </SplideSlide>
         <SplideSlide>
-          <img src="https://dummyimage.com/300x200/000/fff" alt="Image 4" />
+          <Image
+            src="/Logos/Alteco-Logo.webp"
+            width={200}
+            height={300}
+            alt="Alteco"
+            className="object-contain h-[200px] w-[300px]"
+          />
         </SplideSlide>
         <SplideSlide>
-          <img src="https://dummyimage.com/300x200/000/fff" alt="Image 5" />
+          <Image
+            src="/Logos/Edgeconnex-Logo.png"
+            width={200}
+            height={300}
+            alt="Edgeconnex"
+            className="object-contain h-[200px] w-[300px]"
+          />
         </SplideSlide>
         <SplideSlide>
-          <img src="https://dummyimage.com/300x200/000/fff" alt="Image 6" />
+          <Image
+            src="/Logos/NorthC-Logo.png"
+            width={200}
+            height={300}
+            alt="NorthC"
+            className="object-contain h-[200px] w-[300px]"
+          />
         </SplideSlide>
         <SplideSlide>
-          <img src="https://dummyimage.com/300x200/000/fff" alt="Image 7" />
+          <Image
+            src="/Logos/DcConnect-Logo.png"
+            width={200}
+            height={300}
+            alt="Dc Connect"
+            className="object-contain h-[200px] w-[300px]"
+          />
         </SplideSlide>
         <SplideSlide>
-          <img src="https://dummyimage.com/300x200/000/fff" alt="Image 8" />
+          <Image
+            src="/Logos/Verizon-Logo.png"
+            width={200}
+            height={300}
+            alt="Verizon"
+            className="object-contain h-[200px] w-[300px]"
+          />
         </SplideSlide>
         <SplideSlide>
-          <img src="https://dummyimage.com/300x200/000/fff" alt="Image 9" />
+          <Image
+            src="/Logos/BCEI-Logo.gif"
+            width={200}
+            height={300}
+            alt="BCEI International"
+            className="object-contain h-[200px] w-[300px]"
+          />
+        </SplideSlide>
+        <SplideSlide>
+          <Image
+            src="/Logos/CSU-Logo.svg"
+            width={200}
+            height={300}
+            alt="CSU"
+            className="object-contain h-[200px] w-[300px]"
+          />
+        </SplideSlide>
+        <SplideSlide>
+          <Image
+            src="/Logos/Booking-Logo.png"
+            width={200}
+            height={300}
+            alt="Booking.com"
+            className="object-contain h-[200px] w-[300px]"
+          />
+        </SplideSlide>
+        <SplideSlide>
+          <Image
+            src="/Logos/Europol-Logo.png"
+            width={200}
+            height={300}
+            alt="Europol"
+            className="object-contain h-[200px] w-[300px]"
+          />
         </SplideSlide>
       </Splide>
     </div>
