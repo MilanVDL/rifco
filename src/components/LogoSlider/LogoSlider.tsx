@@ -52,11 +52,10 @@ const LogoSlider = () => {
       >
         <SplideSlide>
           <Image
-            src="/Logos/Rabobank-Logo.png"
+            src="/logos/Rabobank-Logo.png"
             width={200}
             height={300}
             alt="Rabobank Logo"
-            unoptimized
             className="object-cover h-[200px] w-[300px]"
           />
         </SplideSlide>
