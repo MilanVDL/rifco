@@ -61,7 +61,7 @@ const LogoSlider = () => {
         </SplideSlide>
         <SplideSlide>
           <Image
-            src="/Logos/Salute-Logo.jpg"
+            src="/logos/Salute-Logo.jpg"
             width={200}
             height={300}
             alt="Salute Inc"
@@ -70,7 +70,7 @@ const LogoSlider = () => {
         </SplideSlide>
         <SplideSlide>
           <Image
-            src="/Logos/Colruyt-Logo.svg"
+            src="/logos/Colruyt-Logo.svg"
             width={200}
             height={300}
             alt="Salute Inc"
@@ -79,7 +79,7 @@ const LogoSlider = () => {
         </SplideSlide>
         <SplideSlide>
           <Image
-            src="/Logos/Alteco-Logo.webp"
+            src="/logos/Alteco-Logo.webp"
             width={200}
             height={300}
             alt="Alteco"
@@ -88,7 +88,7 @@ const LogoSlider = () => {
         </SplideSlide>
         <SplideSlide>
           <Image
-            src="/Logos/Edgeconnex-Logo.png"
+            src="/logos/Edgeconnex-Logo.png"
             width={200}
             height={300}
             alt="Edgeconnex"
@@ -97,7 +97,7 @@ const LogoSlider = () => {
         </SplideSlide>
         <SplideSlide>
           <Image
-            src="/Logos/NorthC-Logo.png"
+            src="/logos/NorthC-Logo.png"
             width={200}
             height={300}
             alt="NorthC"
@@ -106,7 +106,7 @@ const LogoSlider = () => {
         </SplideSlide>
         <SplideSlide>
           <Image
-            src="/Logos/DcConnect-Logo.png"
+            src="/logos/DcConnect-Logo.png"
             width={200}
             height={300}
             alt="Dc Connect"
@@ -115,7 +115,7 @@ const LogoSlider = () => {
         </SplideSlide>
         <SplideSlide>
           <Image
-            src="/Logos/Verizon-Logo.png"
+            src="/logos/Verizon-Logo.png"
             width={200}
             height={300}
             alt="Verizon"
@@ -124,7 +124,7 @@ const LogoSlider = () => {
         </SplideSlide>
         <SplideSlide>
           <Image
-            src="/Logos/BCEI-Logo.gif"
+            src="/logos/BCEI-Logo.gif"
             width={200}
             height={300}
             alt="BCEI International"
@@ -133,7 +133,7 @@ const LogoSlider = () => {
         </SplideSlide>
         <SplideSlide>
           <Image
-            src="/Logos/CSU-Logo.svg"
+            src="/logos/CSU-Logo.svg"
             width={200}
             height={300}
             alt="CSU"
@@ -142,7 +142,7 @@ const LogoSlider = () => {
         </SplideSlide>
         <SplideSlide>
           <Image
-            src="/Logos/Booking-Logo.png"
+            src="/logos/Booking-Logo.png"
             width={200}
             height={300}
             alt="Booking.com"
@@ -151,7 +151,7 @@ const LogoSlider = () => {
         </SplideSlide>
         <SplideSlide>
           <Image
-            src="/Logos/Europol-Logo.png"
+            src="/logos/Europol-Logo.png"
             width={200}
             height={300}
             alt="Europol"
