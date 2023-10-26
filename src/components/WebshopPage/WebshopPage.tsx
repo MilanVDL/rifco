@@ -6,18 +6,20 @@ import { title } from "process";
 const products = [
   {
     id: 1,
-    name: "Test Item 1",
+    name: "Sticky Mats",
     href: "#",
-    price: "$48",
-    imageSrc: "https://placehold.co/300x300",
-    imageAlt:
-      "Tall slender porcelain bottle with natural clay textured body and cork stopper.",
+    price: "€ 149,00",
+    text: "RIFCO Sticky Floor Mat White, '26 x 45' (660 x 1140mm), 30 layers per mat, 10 mats per carton. excl. 21% BTW",
+    imageSrc:
+      "https://high-techconversions.com/wp-content/uploads/2015/11/White-Tacky-Mat.jpg",
+    imageAlt: "Sticky Mats",
   },
   {
     id: 2,
     name: "Test Item 2",
     href: "#",
     price: "$35",
+    text: "",
     imageSrc: "https://placehold.co/400x400",
     imageAlt:
       "Olive drab green insulated bottle with flared screw lid and flat top.",
@@ -27,6 +29,7 @@ const products = [
     name: "Test Item 3",
     href: "#",
     price: "$89",
+    text: "",
     imageSrc: "https://placehold.co/300x300",
     imageAlt:
       "Person using a pen to cross a task off a productivity paper card.",
@@ -36,6 +39,7 @@ const products = [
     name: "Test Item 4",
     href: "#",
     price: "$35",
+    text: "",
     imageSrc: "https://placehold.co/300x300",
     imageAlt:
       "Hand holding black machined steel mechanical pencil with brass tip and top.",
@@ -45,6 +49,7 @@ const products = [
     name: "Test Item 5",
     href: "#",
     price: "$35",
+    text: "",
     imageSrc: "https://placehold.co/300x300",
     imageAlt:
       "Hand holding black machined steel mechanical pencil with brass tip and top.",
@@ -54,6 +59,7 @@ const products = [
     name: "Test Item 6",
     href: "#",
     price: "$35",
+    text: "",
     imageSrc: "https://placehold.co/600x600",
     imageAlt: "Dit is een voorbeeld wat er toont als een foto niet kan laden.",
   },
@@ -61,9 +67,8 @@ const products = [
 ];
 
 export default function WebshopPage() {
-  
   const [showModal, setShowModal] = useState(undefined);
-  const handleClose = () => setShowModal(undefined)
+  const handleClose = () => setShowModal(undefined);
   const handleShow = (id) => setShowModal(id);
 
   return (
@@ -75,8 +80,7 @@ export default function WebshopPage() {
           Webshop
         </h1>
         <p className="font-bodyFont content-center align-middle text-center w-full pb-12">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolore
-          esse, blanditiis tempore rerum maiores.
+          Neem contact ons via ons contact formulier om te bestellen.
         </p>
 
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
@@ -94,19 +98,26 @@ export default function WebshopPage() {
                 />
               </div>
               <div className="relative">
-              <h3 className="mt-4 text-sm text-gray-700">{product.name}</h3>
-              <p className="mt-1 text-lg font-medium text-gray-900">
-                {product.price}
-              </p>
-              <button className="bg-primary hover:opacity-75 transition duration-300 ease-in text-white font-bold py-2 px-4 rounded absolute right-0 top-0"
-              onClick={() => setShowModal(product.id)}
-              >
-                Information
-              </button>
+                <h3 className="mt-4 text-sm text-gray-700">{product.name}</h3>
+                <p className="mt-1 text-lg font-medium text-gray-900">
+                  {product.price}
+                </p>
+                <button
+                  className="bg-primary hover:opacity-75 transition duration-300 ease-in text-white font-bold py-2 px-4 rounded absolute right-0 top-0"
+                  onClick={() => setShowModal(product.id)}
+                >
+                  Information
+                </button>
               </div>
-              {showModal === product.id && <Modal title={product.name} price={product.price} imageSrc={product.imageSrc} onClose={() => setShowModal(false)}>
-                
-                </Modal>}
+              {showModal === product.id && (
+                <Modal
+                  title={product.name}
+                  price={product.price}
+                  imageSrc={product.imageSrc}
+                  text={product.text}
+                  onClose={() => setShowModal(false)}
+                ></Modal>
+              )}
             </a>
           ))}
         </div>

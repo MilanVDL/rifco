@@ -3,14 +3,11 @@ import ReactDOM from "react-dom";
 import Button from "@/components/Button";
 import { AiOutlineClose } from "react-icons/ai";
 
-
-
-const Modal = ({onClose, children, title, price, imageSrc}) => {
-
+const Modal = ({ onClose, children, title, price, imageSrc, text }) => {
   const handleCloseClick = (e) => {
     e.preventDefault();
     onClose();
-  }
+  };
 
   const modalContent = (
     <div className="w-screen h-screen fixed inset-0 backdrop-blur-sm z-50">
@@ -30,15 +27,10 @@ const Modal = ({onClose, children, title, price, imageSrc}) => {
         </div>
         <div className="">
           <h2 className="flex font-bold text-3xl mt-0 md:mt-24 ml-8 md:ml-0">
-            {title} | {price} 
+            {title} | {price}
           </h2>
           <div className="mt-4 max-w-[80%] ml-8 md:ml-0">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-              facere natus vel recusandae eaque culpa officiis ducimus quod
-              nobis cum, nihil repudiandae, unde eligendi tenetur blanditiis
-              cumque tempore numquam laborum.
-            </p>
+            <p>{text}</p>
           </div>
           <div className="mt-8 ml-8 md:ml-0">
             <Button />
@@ -48,12 +40,10 @@ const Modal = ({onClose, children, title, price, imageSrc}) => {
     </div>
   );
 
-
   return ReactDOM.createPortal(
     modalContent,
     document.getElementById("modal-root")
   );
-
 };
 
 export default Modal;
