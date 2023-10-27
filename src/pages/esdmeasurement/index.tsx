@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import PageBanner from "@/components/PageBanner";
 import Image from "next/image";
 import React from "react";
-import TextImage from "../../../public/Esdmeting_foto.jpeg";
+import TextImage from "../../../public/Esdmeting_foto.jpg";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
