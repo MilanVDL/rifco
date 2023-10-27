@@ -102,10 +102,10 @@ const ContactComponent = () => {
                     )}
                     <p
                       className={
-                        "text-base text-body-color pl-2 " +
+                        "text-base text-body-color pl-2 text-[0.67rem]" +
                         (selectedLanguage === "BE"
-                          ? "text-[0.7rem]"
-                          : "text-[1rem]")
+                          ? ""
+                          : "")
                       }
                     >
                       {selectedLanguage === "NL"
