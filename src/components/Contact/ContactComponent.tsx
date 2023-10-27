@@ -45,7 +45,7 @@ const ContactComponent = () => {
         <div className="flex flex-wrap -mx-4 lg:justify-between">
           <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
             <div className="mb-12 max-w-[570px] lg:mb-0">
-              <span className="block mb-4 text-base font-semibold text-primary">
+              <span className="block mb-4 text-base font-semibold text-primary l">
                 {t.subTitle}
               </span>
               <h2 className="mb-6 text-[32px] font-bold uppercase text-dark sm:text-[40px] lg:text-[36px] xl:text-[40px]">
