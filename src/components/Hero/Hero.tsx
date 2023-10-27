@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 //Language
 import nl from "./Languages/nl";
 import en from "./Languages/en";
+import Link from "next/link";
 
 const Hero = () => {
   //Language Stuff :
@@ -27,6 +28,7 @@ const Hero = () => {
             {t.heroSubTitle}
           </p>
           <div className="flex justify-center mt-14 lg:justify-start font-bodyFont">
+            <Link href="/about">
             <button
               type="button"
               className="text-white bg-primary font-semibold rounded-lg px-5 py-4 text-center
@@ -34,6 +36,8 @@ const Hero = () => {
             >
               {t.heroButton1}
             </button>
+            </Link>
+            <Link href="contact">
             <button
               type="button"
               className="ml-4 text-gray-900 bg-gray-300 font-semibold rounded-lg px-5 py-4 text-center
@@ -41,6 +45,7 @@ const Hero = () => {
             >
               {t.heroButton2}
             </button>
+            </Link>
           </div>
         </div>
         <div className="lg:w-1/2">

@@ -14,8 +14,18 @@ import "@splidejs/react-splide/css/core";
 import { freemem } from "os";
 import { lookup } from "dns";
 import Image from "next/image";
+import { useRouter } from "next/router";
+
+import nl from "./Languages/nl";
+import en from "./Languages/en";
 
 const LogoSlider = () => {
+
+  //Language Stuff :
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "nl" ? nl : en;
+
   return (
     <div className="w-[100%]">
       <div className="mx-auto mb-8 max-w-[510px] text-center lg:mb-8">
@@ -23,10 +33,10 @@ const LogoSlider = () => {
           When Quality Matters
         </span>
         <h2 className="mb-4 text-3xl font-bold text-dark sm:text-4xl md:text-[40px]">
-          Onze Klanten
+          {t.upperTitle}
         </h2>
         <p className="text-base text-body-color">
-          De klanten hieronder geloven al jaren lang in onze kwaliteit
+          {t.title}
         </p>
       </div>
       <Splide

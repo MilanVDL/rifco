@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import PageBanner from "@/components/PageBanner";
 import Image from "next/image";
 import React from "react";
-import TextImage from "../../../public/test-foto.png";
+import TextImage from "../../../public/Noodzaak_foto.jpg";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -47,7 +47,7 @@ const Importance = () => {
             height={600}
             alt="test"
             src={TextImage}
-            className="w-full max-h-[30vw] object-none"
+            className="w-full max-h-[30vw] object-cover rounded-xl"
           />
         </div>
       </div>

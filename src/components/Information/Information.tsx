@@ -648,7 +648,7 @@ const Information = () => {
                     </span>
                   </p>
                   <Link
-                    href="/#"
+                    href="/cleaning"
                     className="inline-flex items-center justify-center px-10 py-4 text-base font-bold font-titleFont text-center text-white rounded-lg bg-primary hover:bg-opacity-90 lg:px-8 xl:px-10"
                   >
                     {t.button}

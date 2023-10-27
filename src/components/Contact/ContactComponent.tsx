@@ -1,5 +1,7 @@
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+
+import emailjs from '@emailjs/browser';
 
 //Language
 import nl from "./Languages/nl";
@@ -7,6 +9,12 @@ import en from "./Languages/en";
 import Image from "next/image";
 
 const ContactComponent = () => {
+
+  function SubmitForm(){
+    alert("Email was send succesfully");
+  }
+
+
   //Language Stuff :
   const router = useRouter();
   const { locale } = router;
@@ -17,6 +25,18 @@ const ContactComponent = () => {
   const changeContactLanguage = (e: { target: { value: any } }) => {
     const value = e.target.value;
     setSelectedLanguage(value);
+  };
+
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_pi253gk', 'template_qlcqt75', form.current, 'P-wNYNwDF7vW0FSku')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
   };
 
   return (
@@ -84,7 +104,7 @@ const ContactComponent = () => {
                       className={
                         "text-base text-body-color pl-2 " +
                         (selectedLanguage === "BE"
-                          ? "text-[0.9rem]"
+                          ? "text-[0.7rem]"
                           : "text-[1rem]")
                       }
                     >
@@ -203,31 +223,32 @@ const ContactComponent = () => {
               )}
             </div>
             <div className="relative p-8 bg-white rounded-lg shadow-lg sm:p-12 border-2 border-gray-500">
-              <form>
+              <form ref={form} onSubmit={sendEmail}>
                 <ContactInputBox
                   type="text"
-                  name="name"
+                  name="from_name"
                   placeholder={t.formName}
                 />
                 <ContactInputBox
                   type="text"
-                  name="email"
+                  name="contact_email"
                   placeholder={t.formEmail}
                 />
                 <ContactInputBox
                   type="text"
-                  name="phone"
+                  name="contact_phone"
                   placeholder={t.formPhone}
                 />
                 <ContactTextArea
                   row="6"
                   placeholder={t.formMessage}
-                  name="details"
+                  name="message"
                   defaultValue=""
                 />
                 <div>
                   <button
                     type="submit"
+                    onClick={SubmitForm}
                     className="w-full p-3 text-white transition border rounded border-primary bg-primary hover:bg-opacity-90"
                   >
                     Send Message
@@ -1094,6 +1115,7 @@ const ContactInputBox = (props: ContactInputBox) => {
           placeholder={placeholder}
           name={name}
           className="border-[f0f0f0] w-full rounded border py-3 px-[14px] text-base text-body-color outline-none focus:border-primary focus-visible:shadow-none"
+          required
         />
       </div>
     </>

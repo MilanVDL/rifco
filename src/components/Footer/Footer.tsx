@@ -2,8 +2,17 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import RifcoLogo from "../../../public/rifco_logo.png";
+import { useRouter } from "next/router";
+
+import nl from "./Languages/nl";
+import en from "./Languages/en";
 
 const Footer = () => {
+
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "nl" ? nl : en;
+
   return (
     <footer className="relative z-10 bg-white pt-20 pb-10 lg:pt-[120px] w-[80vw] ml-[10vw] border-t-2 border-gray-400">
       <div className="container">
@@ -44,20 +53,18 @@ const Footer = () => {
             </div>
           </div>
 
-          <LinkGroup header="Resources">
-            <NavLink link="/#" label="Datacenter Reiniging" />
-            <NavLink link="/#" label="De Noodzaak" />
-            <NavLink link="/#" label="Reiniging En Onderhoud" />
-            <NavLink link="/#" label="Programma" />
+          <LinkGroup header={t.titel1}>
+            <NavLink link="/importance" label={t.titel1sub1} />
+            <NavLink link="/cleaning" label={t.titel1sub2} />
+            <NavLink link="/program" label={t.titel1sub3} />
           </LinkGroup>
-          <LinkGroup header="Preventieve Maatregelingen">
-            <NavLink link="/#" label="Coaten Of Impregneren" />
-            <NavLink link="/#" label="ESD Polish Aanbrengen" />
+          <LinkGroup header={t.titel2}>
+            <NavLink link="/coating" label={t.titel2sub1} />
+            <NavLink link="/esd" label={t.titel2sub2} />
           </LinkGroup>
-          <LinkGroup header="Contact">
-            <NavLink link="/contact" label="Contact" />
-            <NavLink link="/#" label="Werken bij Rifco" />
-            <NavLink link="/#" label="Vacatures" />
+          <LinkGroup header={t.titel3}>
+            <NavLink link="/contact" label={t.contact} />
+            <NavLink link="/vacatures" label={t.vaca} />
           </LinkGroup>
 
           <div className="w-fit sm:w-1/2 lg:w-3/12">
