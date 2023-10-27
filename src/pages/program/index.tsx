@@ -11,7 +11,7 @@ import { useRouter } from "next/router";
 import nl from "../../components/PageLanguages/program/nl";
 import en from "../../components/PageLanguages/program/en";
 
-const program = () => {
+const Program = () => {
   //Language Stuff :
   const router = useRouter();
   const { locale } = router;
@@ -50,4 +50,4 @@ const program = () => {
   );
 };
 
-export default program;
+export default Program;

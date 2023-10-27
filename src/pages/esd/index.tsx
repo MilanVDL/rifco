@@ -11,7 +11,7 @@ import { useRouter } from "next/router";
 import nl from "../../components/PageLanguages/esd/nl";
 import en from "../../components/PageLanguages/esd/en";
 
-const esd = () => {
+const Esd = () => {
   //Language Stuff :
   const router = useRouter();
   const { locale } = router;
@@ -46,4 +46,4 @@ const esd = () => {
   );
 };
 
-export default esd;
+export default Esd;

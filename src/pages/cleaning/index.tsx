@@ -11,7 +11,7 @@ import { useRouter } from "next/router";
 import nl from "../../components/PageLanguages/cleaning/nl";
 import en from "../../components/PageLanguages/cleaning/en";
 
-const cleaning = () => {
+const Cleaning = () => {
   //Language Stuff :
   const router = useRouter();
   const { locale } = router;
@@ -48,4 +48,4 @@ const cleaning = () => {
   );
 };
 
-export default cleaning;
+export default Cleaning;

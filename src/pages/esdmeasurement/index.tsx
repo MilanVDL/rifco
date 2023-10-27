@@ -11,7 +11,7 @@ import { useRouter } from "next/router";
 import nl from "../../components/PageLanguages/esdmeasurements/nl";
 import en from "../../components/PageLanguages/esdmeasurements/en";
 
-const esdmeasurements = () => {
+const Esdmeasurements = () => {
   //Language Stuff :
   const router = useRouter();
   const { locale } = router;
@@ -46,4 +46,4 @@ const esdmeasurements = () => {
   );
 };
 
-export default esdmeasurements;
+export default Esdmeasurements;
