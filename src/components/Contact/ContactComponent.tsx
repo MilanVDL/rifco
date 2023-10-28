@@ -12,6 +12,7 @@ const ContactComponent = () => {
 
   function SubmitForm(){
     alert("Email was send succesfully");
+    router.reload();
   }
 
 
@@ -102,7 +103,7 @@ const ContactComponent = () => {
                     )}
                     <p
                       className={
-                        "text-base text-body-color pl-2 text-[0.67rem]" +
+                        "text-base text-body-color pl-2 !text-[0.7rem]" +
                         (selectedLanguage === "BE"
                           ? ""
                           : "")
@@ -194,8 +195,8 @@ const ContactComponent = () => {
 
                     <p className="text-base text-body-color pl-2">
                       {selectedLanguage === "NL"
-                        ? "info@rifco.nl"
-                        : "info@rifco.be"}
+                        ? <a className="text-primary" href="mailto:info@rifco.nl">info@rifco.nl</a>
+                        : <a className="text-primary" href="mailto:info@rifco.be">info@rifco.nl</a>}
                     </p>
                   </div>
                 </div>

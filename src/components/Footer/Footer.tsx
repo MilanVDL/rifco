@@ -14,7 +14,7 @@ const Footer = () => {
   const t = locale === "nl" ? nl : en;
 
   return (
-    <footer className="relative z-10 bg-white pt-20 pb-10 lg:pt-[120px] w-[80vw] ml-[10vw] border-t-2 border-gray-400">
+    <footer className="relative z-10 bg-white pt-20 pb-10 lg:pt-[120px] w-[80vw] ml-[10vw] border-t-2 border-gray-400 md:mb-0 mb-20">
       <div className="container">
         <div className="flex flex-wrap -mx-4">
           <div className="w-full px-4 sm:w-2/3 lg:w-3/12">
@@ -81,7 +81,7 @@ const Footer = () => {
                   target="_blank"
                   className="not-italic"
                 >
-                  Milan van der Linden
+                  MilanO Websites
                 </Link>
               </p>
             </div>
@@ -116,6 +116,7 @@ const Footer = () => {
             </defs>
           </svg>
         </span>
+        <div className="sm:mt-[0%] mt-[50%]">
         <Image
           src="/NEN-Logo.jpg"
           width={300}
@@ -123,6 +124,14 @@ const Footer = () => {
           alt="NEN 4400-1"
           className="absolute bottom-0 right-0 -z-10 mb-12 md:mb-24"
         />
+        <Image
+          src="/VCAVOL.jpg"
+          width={120}
+          height={100}
+          alt="VCA VOL"
+          className="absolute bottom-0 sm:right-0 md:right-[18%] -z-10 mb-12 md:mb-24"
+        />
+        </div>
       </div>
     </footer>
   );

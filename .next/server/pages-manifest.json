@@ -1,8 +1,8 @@
 {
   "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/dust": "pages/dust.js",
-  "/esdmeasurement": "pages/esdmeasurement.js",
-  "/": "pages/index.js"
+  "/_document": "pages/_document.js",
+  "/about": "pages/about.js",
+  "/contact": "pages/contact.js",
+  "/importance": "pages/importance.js"
 }

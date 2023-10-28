@@ -31,9 +31,9 @@ const Vacatures = () => {
               {t.p3}{" "}
               <a
                 className="italic font-bold text-blue-500"
-                href="mailto:ik-meld-me-aan@rifco.nl"
+                href="mailto:info@rifco.nl"
               >
-                ik-meld-me-aan@rifco.nl
+                info@rifco.nl
               </a>
             </p>
             <p className="mt-4">{t.p4}</p>
