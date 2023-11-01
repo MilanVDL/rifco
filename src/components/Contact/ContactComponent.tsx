@@ -158,12 +158,12 @@ const ContactComponent = () => {
                     )}
                     <p className="text-base text-body-color pl-2">
                       {selectedLanguage === "NL"
-                        ? "(+31) 085 - 020 7800"
-                        : "(+32) (0) 9 277 06 87"}
+                        ? "+31 (0) 085 - 020 7800"
+                        : "+32 (0) 9 277 06 87"}
                       <br />
                       {selectedLanguage === "NL"
-                        ? "(Frank) (+31) 06 46 90 33 90"
-                        : "(Frank) (+32) 493 39 14 74"}
+                        ? "(Mobiel) +31 (0) 06 46 90 33 90"
+                        : "(Mobiel) +32 (0) 493 39 14 74"}
                     </p>
                   </div>
                 </div>
@@ -209,7 +209,7 @@ const ContactComponent = () => {
                         </a>
                       ) : (
                         <a className="text-primary" href="mailto:info@rifco.be">
-                          info@rifco.nl
+                          info@rifco.be
                         </a>
                       )}
                     </p>
