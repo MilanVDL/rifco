@@ -4,7 +4,8 @@ const ListComponent = () => {
   return (
     <div className="w-full">
       <ul>
-        <ListItem text="KVK: 7333 5193" />
+        <ListItem text="[NL] KVK: 7333 5193" />
+        <ListItem text="[BE] KVK: 0795.727.622" />
         <ListItem text="BTW-nummer: NL 859 468 136 B01" />
       </ul>
     </div>

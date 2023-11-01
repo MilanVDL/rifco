@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import React, { useState, useRef } from "react";
 
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 //Language
 import nl from "./Languages/nl";
@@ -9,12 +9,10 @@ import en from "./Languages/en";
 import Image from "next/image";
 
 const ContactComponent = () => {
-
-  function SubmitForm(){
+  function SubmitForm() {
     alert("Email was send succesfully");
     router.reload();
   }
-
 
   //Language Stuff :
   const router = useRouter();
@@ -32,12 +30,21 @@ const ContactComponent = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_pi253gk', 'template_qlcqt75', form.current, 'P-wNYNwDF7vW0FSku')
-      .then((result) => {
+    emailjs
+      .sendForm(
+        "service_pi253gk",
+        "template_qlcqt75",
+        form.current,
+        "P-wNYNwDF7vW0FSku"
+      )
+      .then(
+        (result) => {
           console.log(result.text);
-      }, (error) => {
+        },
+        (error) => {
           console.log(error.text);
-      });
+        }
+      );
   };
 
   return (
@@ -104,9 +111,7 @@ const ContactComponent = () => {
                     <p
                       className={
                         "text-base text-body-color pl-2 !text-[0.7rem]" +
-                        (selectedLanguage === "BE"
-                          ? ""
-                          : "")
+                        (selectedLanguage === "BE" ? "" : "")
                       }
                     >
                       {selectedLanguage === "NL"
@@ -140,7 +145,7 @@ const ContactComponent = () => {
                         width={24}
                         height={24}
                         alt="Dutch Flag"
-                        className=""
+                        className="w-[24px] h-[24px]"
                       />
                     ) : (
                       <Image
@@ -148,13 +153,17 @@ const ContactComponent = () => {
                         width={24}
                         height={24}
                         alt="Dutch Flag"
-                        className=""
+                        className="w-[24px] h-[24px]"
                       />
                     )}
                     <p className="text-base text-body-color pl-2">
                       {selectedLanguage === "NL"
                         ? "(+31) 085 - 020 7800"
                         : "(+32) (0) 9 277 06 87"}
+                      <br />
+                      {selectedLanguage === "NL"
+                        ? "(Frank) (+31) 06 46 90 33 90"
+                        : "(Frank) (+32) 493 39 14 74"}
                     </p>
                   </div>
                 </div>
@@ -194,9 +203,15 @@ const ContactComponent = () => {
                     )}
 
                     <p className="text-base text-body-color pl-2">
-                      {selectedLanguage === "NL"
-                        ? <a className="text-primary" href="mailto:info@rifco.nl">info@rifco.nl</a>
-                        : <a className="text-primary" href="mailto:info@rifco.be">info@rifco.nl</a>}
+                      {selectedLanguage === "NL" ? (
+                        <a className="text-primary" href="mailto:info@rifco.nl">
+                          info@rifco.nl
+                        </a>
+                      ) : (
+                        <a className="text-primary" href="mailto:info@rifco.be">
+                          info@rifco.nl
+                        </a>
+                      )}
                     </p>
                   </div>
                 </div>
